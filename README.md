@@ -17,8 +17,9 @@ Anotações feitas diretamente relacionado a mim e com notações pessoais. (Des
 Um array é um aestrutura de dados usada para armazenar dados do mesmo tipo. Os arrays armazenam seus elementos em localizações sequenciais contínuas de memória. Em Java, arrays são objetos. Todos os métodos da classe Object podem ser invocados em um array.
 
 ###### Como fazer ?
-"Tipo [ ] Nome_Do_Array = new Tipo[numero de elementos]" ou "Tipo [ ] Nome_Do_Array = {Valor1, Valor2, Valor3, Valor4...}"
-
+```java
+Tipo [ ] Nome_Do_Array = new Tipo[numero de elementos]" ou "Tipo [ ] Nome_Do_Array = {Valor1, Valor2, Valor3, Valor4...}"
+```
 ## CLasses
 
 ###### O que é?
@@ -26,21 +27,21 @@ Uma Classe é um elemento de códigos Java que ultilizamos para representar obje
 
 ###### Como fazer ?
 definindo uma classe: 
-
-//modificador de acesso// class Nome_Da_Classe{
+```java
+<modificador de acesso> class Nome_Da_Classe{
   
   //local onde atributos, construtores e métodos são criados.
   
   }
-  
+  ```
 exemplo mais rigido:
-
+```java
 public class SomaNumeros{
 
  //local onde atributos, construtores e métodos são criados.
 
 }
-  
+```
 ## Coleções
 
 ###### O que é?
@@ -92,15 +93,17 @@ Trata-se das mesmas estruturas que podem ser encontradas em qualquer outra lingu
 
 ###### como fazer?
 ##### * if: Pode ser feito de três maneiras
+```java
 1 - if (ExpressãoBooleana) { Conjunto de Sentenças }
 
 2 - if (ExpressãoBooleana) { Conjunto de Sentenças } else {Conjunto de Alternativo}
 
 3 - if (ExpressãoBooleana) { Conjunto de Sentenças } else if {Conjunto de Alternativo1} else if{Conjunto de Alternativo2} else{Conjunto de Alternativo final}
-
+```
 Ele pode ser das três formas mas é flexível dependendo da sua necessidade.
 
 ##### * switch: São as que permitem realizar várias ações diferentes dependendo do estado de uma variável.
+```java
 Switch (Expressão) {
   Case Valor1: Conjunto de sentenças;
   Break;
@@ -111,7 +114,7 @@ Switch (Expressão) {
   Case Valor4: Conjunto de sentenças;
   Break;
 }
-
+```
 A sentença 'break' atrás de cada opção de case serve para que não avalie o resto de opções e sim que saia diretamente do Switch, dependendo do que quiser fazer, você colocará ou não.
 
 ## Exceção
@@ -145,6 +148,7 @@ Uma maneira de tentar contornar esses imprevistos é realizar o tratamento dos l
 Para tratar as exceções em Java são utilizados os comandos try e catch.
 
 ##### Sintaxe:
+```java
 try {
 
 //trecho de código que pode vir a lançar uma exceção
@@ -155,7 +159,7 @@ catch(Tipo_De_Excecao){
 //ação a ser tomada
 
 }
-
+```
 #### Onde:
 
 - try{ … } - Neste bloco são introduzidas todas as linhas de código que podem vir a lançar uma exceção.
