@@ -211,11 +211,19 @@ public class CaixaNumero <N extends Number>extends Caixa<N>{
 () -> { return 3.1415 };
 a -> a > 10
 ```
-#### usando em operadores:
+#### pode ser usado também em:
 ```java
 BinaryOperator <Double> calc = (x, y) -> {return x + y; };
 ```
-
+```java
+Function<Integer, String> ParOuImpar = numero -> numero % 2 == 0? "Par" : "Impar";
+```
+```java
+ UnaryOperator<Integer> MaisDois = n -> n + 2;
+```
+```java 
+Predicate<Produto> IsExpensive = prod -> (prod.preco * (1 - prod.desconto)) >= 780;
+```
 ## OO
 
 ## Streams
