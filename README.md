@@ -225,7 +225,23 @@ Function<Integer, String> ParOuImpar = numero -> numero % 2 == 0? "Par" : "Impar
 Predicate<Produto> IsExpensive = prod -> (prod.preco * (1 - prod.desconto)) >= 780;
 ```
 
-## OO
+## POO
+###### O que é?
+são compostos por atributos e métodos definidos a partir de classes, que por sua vez são organizadas em pacotes. Esses conceitos são tão centrais em Java que não se pode programar na linguagem sem utilizá-los.
+
+Todo programa em Java usa classes e objetos, e compreender esses conceitos é fundamental para compreender a própria linguagem. Na prática, sistemas de software reais são grandes e precisam ser fatorados em partes relativamente independentes para serem viáveis. Como em Java isso é feito com classes e objetos, compreendê-los é imprescindível para escrever qualquer programa significativo.
+
+Os programas são escritos em pequenos pedaços separados, chamados de objetos. Objetos são pequenos programas que guardam dentro de si os dados – em suma, as variáveis que precisam para executar suas tarefas. Os objetos também trazem em si, como sub-rotinas, as instruções para processar esses dados. As variáveis que um objeto guarda são chamadas de atributos, e as suas sub-rotinas são chamadas de métodos. Guarde bem esses nomes, pois você os verá ainda muitas vezes.
+
+objetos são criados a partir de modelos que os descrevem. Esses modelos são chamados de classes. É dentro dessas classes que definimos que atributos os objetos conterão e que métodos os objetos fornecerão.
+
+Os quatro pilares da programação orientada a objetos são:
+- Abstração.
+- Encapsulamento.
+- Herança.
+- Polimorfismo.
+
+(Deve se estudar esse assunto mais a fundo e separadamente. Muito complexo para ser simplificado em poucas linhas)
 
 ## Streams
 
