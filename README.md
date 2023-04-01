@@ -84,10 +84,100 @@ A partir do Java 1.2 foi introduzido o Java Collections Frameworks, uma arquitet
 ##### * Mapas – Itens com uma identificação exclusivaClasses que implementam java.util.Map.
 
 ## Controle
+###### O que é?
+Uma estrutura de controle é uma instrução na aplicação que analisa e escolhe direções que determinados blocos ou variáveis devem seguir baseando em seus parâmetros.
+Trata-se das mesmas estruturas que podem ser encontradas em qualquer outra linguagem, tenha em conta que o único que necessitará aprender será a sintaxe e isso se consegue muito melhor programando.
+
+##### Bifurcações: Permitem executar código em função de uma expressão avaliada
+
+###### como fazer?
+##### * if: Pode ser feito de três maneiras
+1 - if (ExpressãoBooleana) { Conjunto de Sentenças }
+
+2 - if (ExpressãoBooleana) { Conjunto de Sentenças } else {Conjunto de Alternativo}
+
+3 - if (ExpressãoBooleana) { Conjunto de Sentenças } else if {Conjunto de Alternativo1} else if{Conjunto de Alternativo2} else{Conjunto de Alternativo final}
+
+Ele pode ser das três formas mas é flexível dependendo da sua necessidade.
+
+##### * switch: São as que permitem realizar várias ações diferentes dependendo do estado de uma variável.
+Switch (Expressão) {
+  Case Valor1: Conjunto de sentenças;
+  Break;
+  Case Valor2: Conjunto de sentenças;
+  Break;
+  Case Valor3: Conjunto de sentenças;
+  Break;
+  Case Valor4: Conjunto de sentenças;
+  Break;
+}
+
+A sentença 'break' atrás de cada opção de case serve para que não avalie o resto de opções e sim que saia diretamente do Switch, dependendo do que quiser fazer, você colocará ou não.
 
 ## Exceção
+Há possibilidade de ocorrer erros imprevistos durante sua execução, esses erros são conhecidos como exceções e podem ser provenientes de erros de lógica ou acesso a dispositivos ou arquivos externos. Elas podem ser provenientes de erros recursos que talvez não estejam disponíveis.
+
+##### Alguns possíveis motivos externos para ocorrer uma exceção são:
+
+- Tentar abrir um arquivo que não existe.
+
+- Tentar fazer consulta a um banco de dados que não está disponível.
+
+- Tentar escrever algo em um arquivo sobre o qual não se tem permissão de escrita.
+
+- Tentar conectar em servidor inexistente.
+
+##### Alguns possíveis erros de lógica para ocorrer uma exceção são:
+
+- Tentar manipular um objeto que está com o valor nulo.
+
+- Dividir um número por zero.
+
+- Tentar manipular um tipo de dado como se fosse outro.
+
+- Tentar utilizar um método ou classe não existentes.
+
+#### Tratando exceções
+
+Uma maneira de tentar contornar esses imprevistos é realizar o tratamento dos locais no código que podem vir a lançar possíveis exceções, como por exemplo, campo de consulta a banco de dados, locais em que há divisões, consulta a arquivos de propriedades ou arquivos dentro do próprio computador.
+
+Para tratar as exceções em Java são utilizados os comandos try e catch.
+
+##### Sintaxe:
+try {
+
+//trecho de código que pode vir a lançar uma exceção
+
+}
+catch(Tipo_De_Excecao){
+
+//ação a ser tomada
+
+}
+
+#### Onde:
+
+- try{ … } - Neste bloco são introduzidas todas as linhas de código que podem vir a lançar uma exceção.
+- catch(tipo_excessao e) { … } - Neste bloco é descrita a ação que ocorrerá quando a exceção for capturada.
+
+Pode-se usar varios catch em sequência
+
+#### OBS:
+existem algumas maneiras diferentes de tratar exceções podendo ser prevista e não prevista.
 
 ## Fundamentos
+realizar uma pesquisa mais a fundo nos principais topicos...
+
+- Console
+- Conversão de tipos
+- Imports
+- Notação ponto 
+- Primitivos 
+- Objetos 
+- Tipos 
+- String 
+- Wrapper
+- Equals
 
 ## Generics
 
