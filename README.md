@@ -211,7 +211,7 @@ public class CaixaNumero <N extends Number>extends Caixa<N>{
 () -> { return 3.1415 };
 a -> a > 10
 ```
-#### pode ser usado também em:
+#### Alem de varios outros, pode ser usado também em:
 ```java
 BinaryOperator <Double> calc = (x, y) -> {return x + y; };
 ```
@@ -224,6 +224,7 @@ Function<Integer, String> ParOuImpar = numero -> numero % 2 == 0? "Par" : "Impar
 ```java 
 Predicate<Produto> IsExpensive = prod -> (prod.preco * (1 - prod.desconto)) >= 780;
 ```
+
 ## OO
 
 ## Streams
