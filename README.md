@@ -244,6 +244,83 @@ Os quatro pilares da programação orientada a objetos são:
 (Deve se estudar esse assunto mais a fundo e separadamente. Muito complexo para ser simplificado em poucas linhas)
 
 ## Streams
+###### O que é?
+abstração para expressar operações eficientes do estilo SQL em relação a uma coleção de dados. Além disso, essas operações podem ser parametrizadas sucintamente mediante expressões lambda.
+A ideia é iterar sobre essas coleções de objetos e, a cada elemento, realizar alguma ação, seja ela de filtragem, mapeamento, transformação, etc. Caberá ao desenvolvedor apenas definir qual ação será realizada sobre o objeto.
 
+Deixar de uma forma mais sucinta uma operação, seja ela qual for. 
+
+###### como fazer?
+```java
+package Streams;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
+
+public class CriandoStreams {
+    public static void main(String[] args) {
+
+        Consumer<String> print = System.out :: print;
+        Consumer<Integer> println = System.out :: println;
+
+        Stream<String> Langs = Stream.of("Java ","Lua " ,"Js\n");
+        Langs.forEach(print);
+
+        String[] MaisLangs = {"Python ", "Lisp ", "Perl ", "Go\n "};
+
+        Stream.of(MaisLangs).forEach(print);
+        Arrays.stream(MaisLangs).forEach(print);
+        Arrays.stream(MaisLangs, 1,3).forEach(print);
+
+        List<String> OutrasLangs = Arrays.asList("\n C ", "PHP " , "Kotlin\n");
+        OutrasLangs.stream().forEach(print);
+        OutrasLangs.parallelStream().forEach(print);
+
+//        Stream.generate(() -> "a").forEach(print);
+//        Stream.iterate(0, n -> n + 1 ).forEach(println);
+
+    }
+}
+```
+#### outro exemplo: 
+
+```java
+package Streams;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
+import java.util.function.Predicate;
+
+public class Reduce3 {
+    public static void main(String[] args) {
+
+
+        Aluno a1 = new Aluno("Ana", 7.1);
+        Aluno a2 = new Aluno("Luna", 6.1);
+        Aluno a3 = new Aluno("Gui", 8.1);
+        Aluno a4 = new Aluno("Gabi", 10);
+
+        List<Aluno> alunos = Arrays.asList(a1,a2,a3,a4);
+
+        Predicate<Aluno> Aprovado = a -> a.nota >= 7;
+        Function<Aluno, Double> ApenasNota = a -> a.nota;
+
+        BiFunction<Media, Double, Media> CalcularMedia = (media, nota) -> media.Adicionar(nota);
+        BinaryOperator<Media> CombinarMedia = (m1,m2) -> Media.Combinar(m1,m2);
+
+        Media media = alunos.stream()
+                .filter(Aprovado)
+                .map(ApenasNota)
+                .reduce(new Media (), CalcularMedia, CombinarMedia);
+
+        System.out.println("A media de todos os alunos aprovados é: " + media.getValor());
+    }
+}
+```
 
 ###### IMPORTANTE: dados pegos diretamente da internet e explicação pessoal... inspiração para um melhor entendimento do conceito retirado da web, qualquer duvida ou exclarecimento entrar em contato.
