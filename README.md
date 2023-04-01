@@ -5,6 +5,7 @@ Estudo realizado pela plataforma da Udemy
 
 #### JAVA: 17 Oracle OpenJDK version 17.0.2
 
+##### estudo em andamento... atualização frequentemente 
 # Explicativo
 
 Conteúdos bem colocados nas classes e bem sucinto para um facil entendimento visto por fora.
