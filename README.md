@@ -115,6 +115,7 @@ Switch (Expressão) {
 A sentença 'break' atrás de cada opção de case serve para que não avalie o resto de opções e sim que saia diretamente do Switch, dependendo do que quiser fazer, você colocará ou não.
 
 ## Exceção
+###### O que é?
 Há possibilidade de ocorrer erros imprevistos durante sua execução, esses erros são conhecidos como exceções e podem ser provenientes de erros de lógica ou acesso a dispositivos ou arquivos externos. Elas podem ser provenientes de erros recursos que talvez não estejam disponíveis.
 
 ##### Alguns possíveis motivos externos para ocorrer uma exceção são:
@@ -180,8 +181,28 @@ realizar uma pesquisa mais a fundo nos principais topicos...
 - Equals
 
 ## Generics
+###### O que é?
+É uma maneira de criar parâmetros para classes e definir tipos que podem ser substituídos em vários lugares do programa. Isso elimina o uso da classe Object para definirmos tipos que podem variar no decorrer do programa. Esta classe tem um método que retorna um array de qualquer tipo.
+O uso de Generics faz-se necessário para evitar casts excessivos e erros que podem ser encontrados em tempo de compilação, antes mesmo de ir para a produção. Todo profissional da área deve ter o conhecimento de como utilizar este recurso tão poderoso, pois em muito se aumenta a produtividade utilizando-o.
 
+Definir uma lista mas sem precisar definir um tipo especifico da lista, criando sem necessidade de uma conversão de tipo.
+###### como fazer?
+```java
+public static <T> T getListaUtil2 (List<T> Lista){
+        return Lista.get(Lista.size() - 1 );
+}
+```
+pode ser visto que não foi definito um tipo, só se faz necessário definir um tipo quando for usada a lista, so vai ser necessário definir uma vez, para um tipo.
+
+pode ser usando em uma classe diretamente também. 
+
+exemplo:
+```java
+public class CaixaNumero <N extends Number>extends Caixa<N>{
+}
+``` 
 ## Lambdas
+
 
 ## OO
 
