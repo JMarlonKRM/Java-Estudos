@@ -202,7 +202,19 @@ public class CaixaNumero <N extends Number>extends Caixa<N>{
 }
 ``` 
 ## Lambdas
-
+É uma função sem declaração, não é necessário colocar um nome, um tipo de retorno e o modificador de acesso. A ideia é que o método seja declarado no mesmo lugar em que será usado. As funções lambdas em Java tem a sintaxe definida como (argumento) -> (corpo).
+```java
+(int a, int b) -> {  return a + b; }
+() -> System.out.println("Hello World");
+(String s) -> { System.out.println(s); }
+() -> 42
+() -> { return 3.1415 };
+a -> a > 10
+```
+#### usando em operadores:
+```java
+BinaryOperator <Double> calc = (x, y) -> {return x + y; };
+```
 
 ## OO
 
