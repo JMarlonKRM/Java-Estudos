@@ -1,0 +1,32 @@
+[
+    {
+        "valor": 299,
+        "id": 2,
+        "descricao": "dvd",
+        "Quantidade": 0
+    },
+    {
+        "valor": 1399,
+        "id": 5,
+        "descricao": "samsung galaxy s22 fe",
+        "Quantidade": 0
+    },
+    {
+        "valor": 4999,
+        "id": 4,
+        "descricao": "samsung galaxy s23 ultra 512gb",
+        "Quantidade": 0
+    },
+    {
+        "valor": 2199,
+        "id": 1,
+        "descricao": "tv lcd 55",
+        "Quantidade": 0
+    },
+    {
+        "valor": 4999,
+        "id": 3,
+        "descricao": "tv oled 42",
+        "Quantidade": 0
+    }
+]
