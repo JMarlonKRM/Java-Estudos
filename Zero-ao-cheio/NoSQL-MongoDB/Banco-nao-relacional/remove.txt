@@ -1,0 +1,3 @@
+db.Nome.remove({sigla: "AC"})  //remove na tora
+
+//pesquisa metodos e treinar com condições

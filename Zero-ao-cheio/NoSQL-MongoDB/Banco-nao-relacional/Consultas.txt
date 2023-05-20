@@ -1,0 +1,26 @@
+db.Nome_collection.find(); // vai mostrar tudo mas com uma formatação padrao de linha
+
+db.Nome_Collection.find().pretty(); // vai mostrar tudo mas formatado em formato Json padrao
+
+db.Nome_Collection.findOne();  // vai mostrar somente a primeira resposta da consulta
+
+db.Nome_Collection.findOne({sigla: "RO"});  // passando um parametro ele vai retornar o objeto no qual tem relação com o Objeto/parametro
+
+db.Nome_Collection.find({Sor: [{sigla: "RO"}, {sigla: "RJ"}, {sigla: "AC"}]}).pretty();
+// essa consulta feita com a condição OU
+
+db.Nome_Collection.find({Sond: [{sigla: "RO"}, {sigla: "RJ"}, {sigla: "AC"}]}).pretty();
+//essa consulta usando a condição E
+
+db.Nome_Collection.find({populacao: {$exists: true}}).pretty(); // vai trazer todos os estados que contém o atributo populacao
+
+
+db.Nome_Collection.find().skip(1); // pula o primeiro e mostra todos dali para frente
+
+db.Nome_Collection.find().skip(1).limit(2); //vai pular 1 e mostrar no maximo 2
+
+db.Nome_Collection.count(); // mostra a quantidade de registros
+
+db.Nome_Collection.find({sigla: "RO"}, {nome: 1, sigla: 1, _id: 0});
+
+estudar sobre o Aggregation no mongodb

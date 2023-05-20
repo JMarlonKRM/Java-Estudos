@@ -1,0 +1,5 @@
+db.estados.aggregate([
+    { $project: {nome: 1, "cidades.nome": 1, _id: 0}}
+])
+
+db.estados.update({sigla: "SP"}, {%set: {populacao: 30000000}})  //cuidados quando fazer uso

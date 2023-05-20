@@ -1,0 +1,23 @@
+db.estados.insert({nome: "Nome_estado", sigla: "SG", região: "NORTE"})
+
+db.estados.save({nome: "Nome_estado", sigla: "SG", região: "NORTE", populacao: 0000000})
+
+db.estados.insert({
+        nome: "Nome_estado",
+        sigla: "SG",
+        região: "NORTE",
+        cicades: [{
+            nome: "Nome_Cidade",
+            area: "000,00"
+            população: 0000000
+        }]
+   })
+
+db.estados.find();
+
+db.estados.find.pretty();
+
+db.help();
+
+
+//inserir no banco Acre,Alagoas, Rio de janeiro

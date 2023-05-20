@@ -1,0 +1,30 @@
+                    **********O MONGODB É CASE SENSITIV**********
+
+show dbs; //mostra os schemas
+
+use nome_do_schema; //usa o schema e se nao foi criado ele pode criar dependendo dos seus proximos passos
+
+db.createCollecttion('Nome_da_coleção');  //ele vai criar uma coleção e assim, se estiver compilado com o comando 'use' ele ja cria a base
+
+show collections; //mostra as coleções que foram criadas
+
+db.Nome_da_collection.drop(); //ele vai dropar a coleção e retorna um valor boolean
+
+db.Nome_Da_colletion.insert({nome: "NOME", sigla: "SIGLA", regiao: "REGIAO"}) // mesmo sem ter coleção sem ter schema pode ser criado ja inserindo dados
+// o MongoDB ele usa o Json para inserir dados (não sei se ele somente o json para inserir, pesquisar dps)
+//bom sempre marcar o use e nome do esquema antes de criar do zero uma colletion ja com dados inseridos
+
+db.Nome_Da_colletion.save({nome: "NOME", sigla: "SIGLA", regiao: "REGIAO", populacao: "POPULAÇÂO"}) // vai inserir junto com o anterior
+// obs: ele nao tem a mesma formalidade que o MariaDB ele nao tem pre definido oq vai onde vai
+
+db.Nome_Da_colletion.find();  //vai monstrar os dados passados dentro da colletion
+
+db.Nome_Da_colletion.find().pretty();  //mostra os dados em formado do json mesmo
+
+// da pra colocar compilado array dentro de obj igual no projeto do maven que ia mostrando no LocalHost
+
+// o mongodb é em formato de documento para ter uma flexibilidade
+
+db.help(); //mostra uma ajuda sobre como usar tudo
+
+
